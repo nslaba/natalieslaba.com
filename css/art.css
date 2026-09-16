@@ -381,20 +381,22 @@
 
 .artist-intro-exhibit-thumb {
   display: block;
-  width: 130px;
+  width: 180px;
   margin: 0 auto 1.5rem;
   text-align: center;
   text-decoration: none;
 }
 
-.artist-intro-exhibit-thumb img {
+.artist-intro-exhibit-thumb img,
+.artist-intro-exhibit-thumb video {
   width: 100%;
   display: block;
   border-radius: 2px;
   transition: opacity 0.25s ease;
 }
 
-.artist-intro-exhibit-thumb:hover img {
+.artist-intro-exhibit-thumb:hover img,
+.artist-intro-exhibit-thumb:hover video {
   opacity: 0.85;
 }
 

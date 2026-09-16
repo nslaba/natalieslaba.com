@@ -1202,13 +1202,12 @@
 /* Very small screens: single column, each piece gets full width */
 @media (max-width: 480px) {
   .gallery-grid {
-    columns: 1;
-    column-gap: 0;
-    max-width: 420px;
+    columns: 2;
+    column-gap: 0.5rem;
   }
 
   .gallery-item {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 }
 

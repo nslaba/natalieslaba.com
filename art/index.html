@@ -1092,10 +1092,6 @@
         let totalMatching = 0;
         const toAnimate = [];
 
-        tierHeadings.forEach(heading => {
-          heading.style.display = (activeFilter === 'all' || activeFilter === heading.dataset.tier) ? '' : 'none';
-        });
-
         items.forEach(item => {
           const matches = activeFilter === 'all' || item.dataset.category === activeFilter;
           if (matches) {
@@ -1110,6 +1106,17 @@
           } else {
             item.style.display = 'none';
           }
+        });
+
+        // Only reveal a tier heading once at least one of its items has
+        // actually been paginated into view — otherwise "Show more" ends up
+        // buried under a stack of empty upcoming section labels.
+        tierHeadings.forEach(heading => {
+          const tier = heading.dataset.tier;
+          const hasVisibleItem = Array.from(items).some(item =>
+            item.dataset.category === tier && item.style.display !== 'none'
+          );
+          heading.style.display = hasVisibleItem ? '' : 'none';
         });
 
         // Staggered entrance for newly revealed items

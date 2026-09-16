@@ -252,8 +252,17 @@
   aspect-ratio: 9 / 16;
   overflow: hidden;
   cursor: pointer;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%);
-  mask-image: linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%);
+}
+
+.artist-intro-video::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right,
+    var(--bg-primary) 0%, transparent 22%,
+    transparent 78%, var(--bg-primary) 100%);
+  pointer-events: none;
+  z-index: 3;
 }
 
 .artist-intro-video-poster,
@@ -298,7 +307,7 @@
   cursor: pointer;
   padding-left: 3px;
   transition: opacity 0.25s, transform 0.25s;
-  z-index: 2;
+  z-index: 4;
 }
 
 .artist-intro-video:hover .artist-intro-video-play {

@@ -439,6 +439,7 @@
   }
 
   .artist-intro-exhibit-thumb {
+    width: 130px;
     margin-left: auto;
     margin-right: auto;
   }

@@ -214,6 +214,36 @@
   opacity: 0.7;
 }
 
+/* Meet the artist — intro video */
+.artist-video {
+  padding: 3rem 2rem 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.artist-video-label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.artist-video-frame {
+  max-width: 340px;
+  margin: 0 auto;
+  background: #000;
+  overflow: hidden;
+}
+
+.artist-video-frame video {
+  width: 100%;
+  display: block;
+}
+
 /* Artist intro */
 .artist-intro {
   padding: 2.5rem 2rem 0;
@@ -278,6 +308,54 @@
   text-align: center;
   margin-bottom: 3rem;
   text-transform: lowercase;
+}
+
+/* Curatorial note */
+.gallery-curatorial-note {
+  max-width: 640px;
+  margin: -1.5rem auto 2.5rem;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+
+/* Tier headings — divide the masonry grid into Paintings / Murals / Process */
+.gallery-tier-heading {
+  column-span: all;
+  break-inside: avoid;
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.gallery-grid > .gallery-tier-heading:first-child {
+  padding-top: 0;
+  border-top: none;
+  margin-top: 0;
+}
+
+.gallery-tier-heading--sub {
+  margin-top: 3rem;
+}
+
+.gallery-tier-heading span {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: lowercase;
+  color: var(--text-muted);
+}
+
+/* Murals — deliberately smaller & more uniform than the paintings tier */
+.gallery-item[data-category="murals"] img {
+  max-height: 240px;
+  object-fit: cover;
 }
 
 /* Categories */
@@ -889,6 +967,7 @@
     font-size: 0.9rem;
   }
 
+  .artist-video,
   .art-gallery,
   .art-thoughts,
   .shop-teaser {
@@ -967,43 +1046,6 @@
   font-style: italic;
   color: var(--text-secondary);
   line-height: 1.8;
-}
-
-/* Prints intro */
-.prints-intro {
-  display: none;
-  max-width: 600px;
-  margin: 0 auto 2rem;
-  text-align: center;
-}
-
-.prints-intro.visible {
-  display: block;
-}
-
-.prints-statement {
-  font-size: 1rem;
-  font-style: italic;
-  color: var(--text-secondary);
-  line-height: 1.8;
-  margin-bottom: 1rem;
-}
-
-.prints-shop-link {
-  display: inline-block;
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-primary);
-  text-decoration: none;
-  border-bottom: 1px solid var(--text-primary);
-  padding-bottom: 2px;
-  transition: opacity 0.2s;
-}
-
-.prints-shop-link:hover {
-  opacity: 0.6;
 }
 
 /* ==========================================================================

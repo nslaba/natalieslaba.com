@@ -89,9 +89,22 @@
     <a href="exhibitions/" class="artist-intro-show">Upcoming: Silence in a Noisy World — Solo exhibition, July–Sept 2026 at Squamish Arts →</a>
   </section>
 
+  <!-- Meet the artist -->
+  <section class="artist-video">
+    <span class="artist-video-label">in her own words</span>
+    <div class="artist-video-frame">
+      <video controls playsinline preload="metadata"
+             poster="../assets/videos/intro_poster.jpg">
+        <source src="../assets/videos/intro.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
   <!-- Gallery Section -->
   <section class="art-gallery" id="gallery">
     <h2>selected works</h2>
+
+    <p class="gallery-curatorial-note">A throughline runs under all of this: power, systems, and how perception bends under both. Dictator, Bourgeois Living, Human Ambition, Corruption of Perspective, and Long Term Non-Renewables circle the same question from different angles — who gets to decide what's real, and what it costs to go along with it.</p>
 
     <!-- Category filters -->
     <div class="art-categories">
@@ -99,7 +112,6 @@
       <button class="category-btn" data-filter="finished">Paintings</button>
       <button class="category-btn" data-filter="murals">Murals</button>
       <button class="category-btn" data-filter="sketches">Sketches</button>
-      <button class="category-btn" data-filter="prints">Prints</button>
     </div>
 
     <!-- Murals intro -->
@@ -112,14 +124,10 @@
       <p class="sketches-statement">I think the rawest forms of creativity exist in unpolished works. Simple momentary expressions.</p>
     </div>
 
-    <!-- Prints intro -->
-    <div class="prints-intro" id="prints-intro">
-      <p class="prints-statement">An experiment in accessibility — printing my art on everyday objects so it can live in your pocket, your morning routine, wherever.</p>
-      <a href="shop.html" class="prints-shop-link">Shop all prints &amp; merch &rarr;</a>
-    </div>
-
     <!-- Gallery Grid -->
     <div class="gallery-grid">
+
+      <div class="gallery-tier-heading" data-tier="finished"><span>Paintings</span></div>
 
       <!-- hidden: in exhibit, not ready to post
       <div class="gallery-item" data-category="finished" data-forsale="true" data-note="Biology paying a visit, leaving its marks. To what extent are we anything else?">
@@ -434,6 +442,8 @@
         </div>
       </div>
 
+      <div class="gallery-tier-heading gallery-tier-heading--sub" data-tier="murals"><span>Murals</span></div>
+
       <!-- Murals -->
       <div class="gallery-item" data-category="murals">
         <img src="../assets/images/art/thumbs/mural_montreal.webp" data-full="../assets/images/art/mural_montreal.webp" alt="Montreal Mural" loading="lazy">
@@ -602,6 +612,8 @@
           <span class="gallery-item-medium">Mural</span>
         </div>
       </div>
+
+      <div class="gallery-tier-heading gallery-tier-heading--sub" data-tier="sketches"><span>Process &amp; Sketchbook</span></div>
 
       <!-- Sketches -->
       <div class="gallery-item" data-category="sketches">
@@ -783,21 +795,21 @@
       <div class="gallery-item" data-category="sketches">
         <img src="../assets/images/art/thumbs/doodle.jpg" data-full="../assets/images/art/doodle.jpg" alt="Doodle" loading="lazy">
         <div class="gallery-item-overlay">
-          <span class="gallery-item-title">Doodle</span>
+          <span class="gallery-item-title">Doodle I</span>
         </div>
       </div>
 
       <div class="gallery-item" data-category="sketches">
         <img src="../assets/images/art/thumbs/doodle1.webp" data-full="../assets/images/art/doodle1.webp" alt="Doodle 1" loading="lazy">
         <div class="gallery-item-overlay">
-          <span class="gallery-item-title">Doodle I</span>
+          <span class="gallery-item-title">Doodle II</span>
         </div>
       </div>
 
       <div class="gallery-item" data-category="sketches">
         <img src="../assets/images/art/thumbs/doodle2.webp" data-full="../assets/images/art/doodle2.webp" alt="Doodle 2" loading="lazy">
         <div class="gallery-item-overlay">
-          <span class="gallery-item-title">Doodle II</span>
+          <span class="gallery-item-title">Doodle III</span>
         </div>
       </div>
 
@@ -825,14 +837,14 @@
       <div class="gallery-item" data-category="sketches">
         <img src="../assets/images/art/thumbs/doodle10.webp" data-full="../assets/images/art/doodle10.webp" alt="Doodle 10" loading="lazy">
         <div class="gallery-item-overlay">
-          <span class="gallery-item-title">Doodle X</span>
+          <span class="gallery-item-title">Doodle VII</span>
         </div>
       </div>
 
       <div class="gallery-item" data-category="sketches">
         <img src="../assets/images/art/thumbs/doodle11.webp" data-full="../assets/images/art/doodle11.webp" alt="Doodle 11" loading="lazy">
         <div class="gallery-item-overlay">
-          <span class="gallery-item-title">Doodle XI</span>
+          <span class="gallery-item-title">Doodle VIII</span>
         </div>
       </div>
 
@@ -847,71 +859,6 @@
         <img src="../assets/images/art/thumbs/nature_watches.webp" data-full="../assets/images/art/nature_watches.webp" alt="Nature Watches" loading="lazy">
         <div class="gallery-item-overlay">
           <span class="gallery-item-title">Nature Watches</span>
-        </div>
-      </div>
-
-      <!-- Prints & Merch -->
-      <div class="gallery-item" data-category="prints">
-        <img src="../assets/images/art/thumbs/merch/case-1.jpg" data-full="../assets/images/art/merch/case-1.jpg" alt="Art print on phone case" loading="lazy">
-        <div class="gallery-item-overlay">
-          <span class="gallery-item-title">Phone Case I</span>
-          <span class="gallery-item-medium">Prints &amp; Merch</span>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-category="prints">
-        <img src="../assets/images/art/thumbs/merch/case-2.jpg" data-full="../assets/images/art/merch/case-2.jpg" alt="Art print on phone case" loading="lazy">
-        <div class="gallery-item-overlay">
-          <span class="gallery-item-title">Phone Case II</span>
-          <span class="gallery-item-medium">Prints &amp; Merch</span>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-category="prints">
-        <img src="../assets/images/art/thumbs/merch/case-iphone16.jpg" data-full="../assets/images/art/merch/case-iphone16.jpg" alt="iPhone 16 case with art print" loading="lazy">
-        <div class="gallery-item-overlay">
-          <span class="gallery-item-title">iPhone 16 Case</span>
-          <span class="gallery-item-medium">Prints &amp; Merch</span>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-category="prints">
-        <img src="../assets/images/art/thumbs/merch/case-closeup-1.jpg" data-full="../assets/images/art/merch/case-closeup-1.jpg" alt="Art detail on phone case" loading="lazy">
-        <div class="gallery-item-overlay">
-          <span class="gallery-item-title">Case Detail I</span>
-          <span class="gallery-item-medium">Prints &amp; Merch</span>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-category="prints">
-        <img src="../assets/images/art/thumbs/merch/case-closeup-3.jpg" data-full="../assets/images/art/merch/case-closeup-3.jpg" alt="Art detail on phone case" loading="lazy">
-        <div class="gallery-item-overlay">
-          <span class="gallery-item-title">Case Detail II</span>
-          <span class="gallery-item-medium">Prints &amp; Merch</span>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-category="prints">
-        <img src="../assets/images/art/thumbs/merch/case-closeup-6.jpg" data-full="../assets/images/art/merch/case-closeup-6.jpg" alt="Art detail on phone case" loading="lazy">
-        <div class="gallery-item-overlay">
-          <span class="gallery-item-title">Case Detail III</span>
-          <span class="gallery-item-medium">Prints &amp; Merch</span>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-category="prints">
-        <img src="../assets/images/art/thumbs/merch/stitching-front.jpg" data-full="../assets/images/art/merch/stitching-front.jpg" alt="Embroidered item" loading="lazy">
-        <div class="gallery-item-overlay">
-          <span class="gallery-item-title">Embroidery I</span>
-          <span class="gallery-item-medium">Prints &amp; Merch</span>
-        </div>
-      </div>
-
-      <div class="gallery-item" data-category="prints">
-        <img src="../assets/images/art/thumbs/merch/stitching-on-person.jpg" data-full="../assets/images/art/merch/stitching-on-person.jpg" alt="Embroidered item worn" loading="lazy">
-        <div class="gallery-item-overlay">
-          <span class="gallery-item-title">Embroidery II</span>
-          <span class="gallery-item-medium">Prints &amp; Merch</span>
         </div>
       </div>
 
@@ -1009,9 +956,9 @@
       // Category filter + show more
       const buttons = document.querySelectorAll('.category-btn');
       const items = document.querySelectorAll('.gallery-item');
+      const tierHeadings = document.querySelectorAll('.gallery-tier-heading');
       const muralsIntro = document.getElementById('murals-intro');
       const sketchesIntro = document.getElementById('sketches-intro');
-      const printsIntro = document.getElementById('prints-intro');
       const showMoreBtn = document.getElementById('showMoreBtn');
       const ITEMS_PER_PAGE = 12;
       let visibleCount = ITEMS_PER_PAGE;
@@ -1022,10 +969,12 @@
         let totalMatching = 0;
         const toAnimate = [];
 
+        tierHeadings.forEach(heading => {
+          heading.style.display = (activeFilter === 'all' || activeFilter === heading.dataset.tier) ? '' : 'none';
+        });
+
         items.forEach(item => {
-          const matches = activeFilter === 'all'
-            ? item.dataset.category !== 'prints'
-            : item.dataset.category === activeFilter;
+          const matches = activeFilter === 'all' || item.dataset.category === activeFilter;
           if (matches) {
             totalMatching++;
             matchCount++;
@@ -1051,7 +1000,6 @@
         showMoreBtn.style.display = visibleCount >= totalMatching ? 'none' : 'block';
         muralsIntro.classList.toggle('visible', activeFilter === 'murals');
         sketchesIntro.classList.toggle('visible', activeFilter === 'sketches');
-        printsIntro.classList.toggle('visible', activeFilter === 'prints');
       }
 
       buttons.forEach(btn => {

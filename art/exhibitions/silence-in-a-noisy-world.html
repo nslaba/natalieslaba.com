@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Silence in a Noisy World: solo exhibition by Natalie Slaba at Squamish Arts, on view through September 2026.">
+
+  <title>Silence in a Noisy World | Natalie Slaba</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/exhibitions.css">
+
+  <style>
+    .silence-paintings-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .silence-painting {
+      margin: 0;
+      cursor: pointer;
+    }
+
+    .silence-painting img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 2px;
+      transition: opacity 0.25s ease;
+    }
+
+    .silence-painting:hover img {
+      opacity: 0.88;
+    }
+
+    .silence-painting figcaption {
+      margin-top: 0.6rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+    }
+
+    .silence-video-feature {
+      max-width: 380px;
+      margin: 0 auto 3rem;
+      padding: 0 2rem;
+      text-align: center;
+    }
+
+    .silence-video-feature video {
+      width: 100%;
+      display: block;
+      border-radius: 2px;
+    }
+
+    .silence-video-feature-caption {
+      display: block;
+      margin-top: 0.85rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .silence-inspiration {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .silence-inspiration img {
+      width: 220px;
+      flex-shrink: 0;
+      border-radius: 2px;
+      display: block;
+    }
+
+    .silence-inspiration p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1rem, 1.5vw, 1.1rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    @media (max-width: 700px) {
+      .silence-inspiration {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .silence-inspiration img {
+        width: 200px;
+      }
+    }
+  </style>
+</head>
+<body class="art-page">
+
+  <!-- Tree ring background -->
+  <canvas id="tree-rings"></canvas>
+
+  <!-- Navigation -->
+  <nav class="art-nav">
+    <div class="nav-left">
+      <a href="../../index.html" class="logo">Home</a>
+      <span class="nav-sep">/</span>
+      <a href="../index.html" class="logo">Gallery</a>
+    </div>
+    <button class="art-nav-toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="art-nav-links">
+      <li><a href="./" class="active">Exhibitions</a></li>
+      <li><a href="../statement.html">Artist Statement</a></li>
+      <li><a href="../shop.html">Shop</a></li>
+      <li><a href="../../tech/index.html">Tech</a></li>
+    </ul>
+  </nav>
+
+  <!-- Back link -->
+  <a href="./" class="exhibit-back">&larr; exhibitions</a>
+
+  <!-- Header -->
+  <div class="exhibit-header">
+    <h1>Silence in a Noisy World</h1>
+    <div class="exhibit-meta">
+      <span>July 1 – September 30, 2026</span>
+      <span>Squamish Arts, Squamish BC</span>
+    </div>
+  </div>
+
+  <!-- Story -->
+  <div class="exhibit-story">
+    <p>I feel the freest in the in-between moments.</p>
+    <p>We hold a lot of stories about ourselves and about the world, and the older I get, the more I notice they often don't quite line up with reality. How often do we live inside our heads, convinced the story is the whole picture? Reality is so much more complex and beautiful than what our minds construct about our identities, about others, about what any of this is.</p>
+    <p>I often go for runs to be seen by something real, something organic like myself, and to momentarily escape the constructed mental web we live and operate under. We are a fascinating species. But with our complexity comes our primitiveness, and the truth tends to exist in silence. In the aftermath. Life doesn't happen in the glamorous moments. It happens in the in-between, when we wait for the bus, when we're rushing to the next thing, when nobody is watching and nothing is asked of us.</p>
+    <p>With this exhibit I want to point at the small, beautiful things worth living for. I'd like to remind my dear friends to look closely at moss, at the trees and listen to the birds in our beautiful forests. Life is already here, happening all around us. Step into the silence long enough for the truth to come up. It's worth sitting with.</p>
+  </div>
+
+  <!-- Walkthrough video -->
+  <div class="silence-video-feature">
+    <video autoplay muted loop playsinline preload="metadata"
+           poster="../../assets/videos/silence_walkthrough_poster.jpg">
+      <source src="../../assets/videos/silence_walkthrough.mp4" type="video/mp4">
+    </video>
+    <span class="silence-video-feature-caption">a walk through the work</span>
+  </div>
+
+  <!-- Section 1: The Paintings -->
+  <section class="exhibit-section">
+    <div class="exhibit-section-header">
+      <h2 class="exhibit-section-title">the paintings</h2>
+      <p class="exhibit-section-desc">Twenty or more new works in layered acrylic and acrylic ink, figurative, surreal, unhurried. The first pieces from the series are shown below, with more to follow as the show is documented in full.</p>
+    </div>
+    <div class="silence-paintings-grid">
+      <figure class="silence-painting" data-title="Bee Hives">
+        <img src="../../assets/images/art/silence_bee_hives.webp" alt="Bee Hives" loading="lazy">
+        <figcaption>Bee Hives</figcaption>
+      </figure>
+      <figure class="silence-painting" data-title="Childhood Dreams">
+        <img src="../../assets/images/art/silence_childhood_dreams.webp" alt="Childhood Dreams" loading="lazy">
+        <figcaption>Childhood Dreams</figcaption>
+      </figure>
+      <figure class="silence-painting" data-title="Clown">
+        <img src="../../assets/images/art/silence_clown.webp" alt="Clown" loading="lazy">
+        <figcaption>Clown</figcaption>
+      </figure>
+      <figure class="silence-painting" data-title="Mushroom Man">
+        <img src="../../assets/images/art/silence_mushroom_man.webp" alt="Mushroom Man" loading="lazy">
+        <figcaption>Mushroom Man</figcaption>
+      </figure>
+      <figure class="silence-painting" data-title="Zebra">
+        <img src="../../assets/images/art/silence_zebra.webp" alt="Zebra" loading="lazy">
+        <figcaption>Zebra</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Section 2: Opening Night -->
+  <section class="exhibit-section exhibit-section--alt">
+    <div class="exhibit-section-header">
+      <h2 class="exhibit-section-title">opening night</h2>
+      <p class="exhibit-section-desc">Free and open to the public, with an opening event and artist talk.</p>
+    </div>
+    <div class="exhibit-gallery">
+      <img src="../../assets/images/art/exhibitions/silence/crowd1.webp" alt="Guests viewing paintings at the opening" loading="lazy">
+      <img src="../../assets/images/art/exhibitions/silence/crowd2.webp" alt="Guests gathered in the gallery at the opening" loading="lazy">
+      <img src="../../assets/images/art/exhibitions/silence/install1.webp" alt="Hanging the paintings before the show" loading="lazy">
+      <img src="../../assets/images/art/exhibitions/silence/install2.webp" alt="Installing the exhibit ahead of opening night" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Section 3: Inspiration -->
+  <section class="exhibit-section">
+    <div class="exhibit-section-header">
+      <h2 class="exhibit-section-title">inspiration</h2>
+    </div>
+    <div class="silence-inspiration">
+      <img src="../../assets/images/art/exhibitions/silence/inspiration.webp" alt="Moss and lichen in the forest" loading="lazy">
+      <p>Look closely at moss, at the trees, listen to the birds in the forest. Life is already here, happening all around us.</p>
+    </div>
+  </section>
+
+  <!-- Exhibit navigation -->
+  <div class="exhibit-next">
+    <a href="montreal.html" class="exhibit-next-link">
+      <span class="exhibit-next-arrow">&larr;</span>
+      <img src="../../assets/images/art/expo-montreal/poster.webp" alt="L'expo a Montreal avec Karim">
+      <div class="exhibit-next-info">
+        <span class="exhibit-next-label">Previous exhibition</span>
+        <span class="exhibit-next-title">L'expo a Montreal avec Karim</span>
+        <span class="exhibit-next-meta">Montreal &middot; 2019</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="art-footer">
+    <nav class="art-footer-nav">
+      <a href="../../index.html">Home</a>
+      <a href="../../tech/index.html">Tech</a>
+      <a href="../../about.html">About</a>
+      <a href="mailto:slaba.natalie@gmail.com">Contact</a>
+      <a href="https://www.instagram.com/naty_slaba.art" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+    <span style="font-size: 0.75rem; color: #999;">
+      &copy; 2026 Natalie Slaba
+    </span>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" aria-label="Close">&times;</button>
+      <button class="lightbox-nav lightbox-prev" aria-label="Previous">&lsaquo;</button>
+      <img src="" alt="">
+      <button class="lightbox-nav lightbox-next" aria-label="Next">&rsaquo;</button>
+      <div class="lightbox-caption">
+        <div class="lightbox-title"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const navToggle = document.querySelector('.art-nav-toggle');
+    const navLinks = document.querySelector('.art-nav-links');
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('open');
+        navLinks.classList.remove('open');
+      });
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = lightbox.querySelector('.lightbox-content > img');
+      const lightboxTitle = lightbox.querySelector('.lightbox-title');
+      const closeBtn = lightbox.querySelector('.lightbox-close');
+      const prevBtn = lightbox.querySelector('.lightbox-prev');
+      const nextBtn = lightbox.querySelector('.lightbox-next');
+
+      // Paintings (titled) + documentary photos (untitled), combined into one
+      // navigable sequence so prev/next flows naturally across the page.
+      const tiles = Array.from(document.querySelectorAll('.silence-painting img, .exhibit-gallery img'));
+      let currentIndex = 0;
+
+      function openLightbox(index) {
+        currentIndex = index;
+        updateLightbox();
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      function updateLightbox() {
+        const img = tiles[currentIndex];
+        const title = img.closest('.silence-painting');
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxTitle.textContent = title ? title.dataset.title : '';
+      }
+
+      function showPrev() {
+        currentIndex = (currentIndex - 1 + tiles.length) % tiles.length;
+        updateLightbox();
+      }
+
+      function showNext() {
+        currentIndex = (currentIndex + 1) % tiles.length;
+        updateLightbox();
+      }
+
+      tiles.forEach((img, index) => {
+        img.addEventListener('click', () => openLightbox(index));
+      });
+
+      closeBtn.addEventListener('click', closeLightbox);
+      prevBtn.addEventListener('click', showPrev);
+      nextBtn.addEventListener('click', showNext);
+
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') showPrev();
+        if (e.key === 'ArrowRight') showNext();
+      });
+    });
+  </script>
+
+  <!-- Tree ring background renderer -->
+  <script>
+    (function () {
+      var canvas = document.getElementById('tree-rings');
+      if (!canvas) return;
+      var ctx = canvas.getContext('2d');
+      function rand(a, b) { return a + Math.random() * (b - a); }
+      var img = new Image();
+      img.src = '../../assets/images/art/tree-cross-section.png';
+      function draw() {
+        canvas.width  = window.innerWidth;
+        canvas.height = window.innerHeight;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        if (!img.complete || img.naturalWidth === 0) return;
+        var w = canvas.width, h = canvas.height;
+        var placed = [];
+        var target = Math.round(rand(16, 22));
+        for (var i = 0; i < target; i++) {
+          var size = rand(100, 380), r = size / 2;
+          var cx, cy, ok, tries = 0;
+          do {
+            cx = rand(-r * 0.3, w + r * 0.3);
+            cy = rand(-r * 0.3, h + r * 0.3);
+            ok = true;
+            for (var j = 0; j < placed.length; j++) {
+              var dx = cx - placed[j].cx, dy = cy - placed[j].cy;
+              if (dx * dx + dy * dy < Math.pow(r + placed[j].r, 2)) { ok = false; break; }
+            }
+            tries++;
+          } while (!ok && tries < 60);
+          if (!ok) continue;
+          placed.push({ cx: cx, cy: cy, r: r });
+          ctx.save();
+          ctx.globalAlpha = rand(0.07, 0.15);
+          ctx.translate(cx, cy);
+          ctx.rotate(rand(0, Math.PI * 2));
+          ctx.drawImage(img, -r, -r, size, size);
+          ctx.restore();
+        }
+      }
+      img.onload = draw;
+      var timer;
+      window.addEventListener('resize', function () {
+        clearTimeout(timer);
+        timer = setTimeout(draw, 250);
+      });
+    }());
+  </script>
+
+</body>
+</html>

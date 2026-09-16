@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Exhibitions by Natalie Slaba: upcoming solo show at Squamish Arts community gallery at the Artisan, July–September 2026. Past shows in Montreal and Calgary.">
+  <meta name="description" content="Exhibitions by Natalie Slaba: current solo show at Squamish Arts community gallery at the Artisan, on view through September 2026. Past shows in Montreal and Calgary.">
 
   <title>Exhibitions | Natalie Slaba</title>
 
@@ -32,8 +32,47 @@
     padding: 4rem 2rem 3rem;
     position: relative;
     z-index: 1;
-    max-width: 680px;
+    max-width: 920px;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .upcoming-feature-media {
+    flex-shrink: 0;
+    width: 220px;
+  }
+
+  .upcoming-feature-media img {
+    width: 100%;
+    display: block;
+    border-radius: 2px;
+    transition: opacity 0.25s ease;
+  }
+
+  .upcoming-feature-media:hover img {
+    opacity: 0.88;
+  }
+
+  .upcoming-feature-inner {
+    min-width: 0;
+  }
+
+  @media (max-width: 760px) {
+    .upcoming-feature {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .upcoming-feature-media {
+      width: 180px;
+    }
+
+    .upcoming-desc {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   .upcoming-label {
@@ -165,17 +204,22 @@
     <h1>exhibitions</h1>
   </section>
 
-  <!-- Upcoming show feature -->
+  <!-- Current show feature -->
   <section class="upcoming-feature">
+    <div class="upcoming-feature-media">
+      <a href="silence-in-a-noisy-world.html">
+        <img src="../../assets/images/art/silence_bee_hives.webp" alt="Bee Hives, from Silence in a Noisy World" loading="lazy">
+      </a>
+    </div>
     <div class="upcoming-feature-inner">
-      <span class="upcoming-label">upcoming · solo exhibition</span>
+      <span class="upcoming-label">current · solo exhibition</span>
       <h2 class="upcoming-title">Silence in a Noisy World</h2>
       <p class="upcoming-venue">Squamish Arts community gallery at the Artisan</p>
       <p class="upcoming-dates">July 1 – September 30, 2026</p>
       <p class="upcoming-location">1336 Main Street, Squamish BC, unceded Sḵwx̱wú7mesh territory</p>
-      <p class="upcoming-desc">We live in a media environment designed to generate urgency: a constant stream of noise that mistakes reaction for engagement. This series asks what becomes visible when we step away from that stream. Twenty or more new paintings in layered acrylic and acrylic ink, figurative, surreal, unhurried. Free and open to the public, with an opening event and artist talk.</p>
+      <p class="upcoming-desc">We live in a media environment designed to generate urgency: a constant stream of noise that mistakes reaction for engagement. This series asks what becomes visible when we step away from that stream. Twenty or more new paintings in layered acrylic and acrylic ink, figurative, surreal, unhurried. Free and open to the public through September 2026.</p>
       <div class="upcoming-actions">
-        <a href="mailto:slaba.natalie@gmail.com?subject=Opening notification, Silence in a Noisy World" class="upcoming-cta">Get notified of the opening →</a>
+        <a href="silence-in-a-noisy-world.html" class="upcoming-cta">View the exhibit →</a>
         <a href="../shop.html" class="upcoming-cta-secondary">Inquire about works →</a>
       </div>
     </div>

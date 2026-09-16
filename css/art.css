@@ -368,20 +368,54 @@
   color: var(--text-primary);
 }
 
-.artist-intro-show {
+.artist-intro-exhibiting-label {
   display: block;
   font-family: 'Inter', sans-serif;
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
   color: var(--text-muted);
-  text-decoration: none;
-  text-align: left;
-  margin-top: 1.25rem;
-  transition: color 0.2s;
+  margin-bottom: 0.85rem;
 }
 
-.artist-intro-show:hover {
+.artist-intro-exhibit-thumb {
+  display: inline-block;
+  width: 130px;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+}
+
+.artist-intro-exhibit-thumb img {
+  width: 100%;
+  display: block;
+  border-radius: 2px;
+  transition: opacity 0.25s ease;
+}
+
+.artist-intro-exhibit-thumb:hover img {
+  opacity: 0.85;
+}
+
+.artist-intro-exhibit-title {
+  display: block;
+  margin-top: 0.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
   color: var(--text-primary);
+  transition: opacity 0.2s;
+}
+
+.artist-intro-exhibit-meta {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+.artist-intro-exhibit-thumb:hover .artist-intro-exhibit-title,
+.artist-intro-exhibit-thumb:hover .artist-intro-exhibit-meta {
+  opacity: 0.6;
 }
 
 @media (max-width: 700px) {
@@ -396,9 +430,13 @@
   }
 
   .artist-intro-text,
-  .artist-intro-text p,
-  .artist-intro-show {
+  .artist-intro-text p {
     text-align: center;
+  }
+
+  .artist-intro-exhibit-thumb {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

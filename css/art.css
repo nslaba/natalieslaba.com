@@ -232,6 +232,25 @@
   z-index: 3;
 }
 
+/* Animation — badge marking gallery items that play a video in the lightbox */
+.gallery-item[data-category="animation"]::after {
+  content: '▶';
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 0.7rem;
+  padding-left: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
 /* Artist intro — bio paired with a short video introduction */
 .artist-intro {
   padding: 2.5rem 2rem 0;
@@ -834,6 +853,12 @@
   max-width: 100%;
   max-height: 80vh;
   object-fit: contain;
+}
+
+.lightbox-video {
+  display: none;
+  max-width: 100%;
+  max-height: 80vh;
 }
 
 .lightbox-caption {

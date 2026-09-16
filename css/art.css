@@ -542,6 +542,16 @@
   margin-bottom: 0.25rem;
 }
 
+.gallery-item-series {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 0.25rem;
+}
+
 .gallery-item-medium {
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.7);
@@ -837,6 +847,15 @@
   margin-bottom: 0.25rem;
 }
 
+.lightbox-series {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 0.35rem;
+}
+
 .lightbox-medium {
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.7);
@@ -1078,6 +1097,7 @@
     background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0) 55%);
   }
 
+  .gallery-item-series,
   .gallery-item-medium,
   .gallery-item-note {
     display: none;

@@ -69,10 +69,25 @@
       border-radius: 2px;
     }
 
+    .silence-story-row {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem 3rem;
+    }
+
+    .silence-story-row .exhibit-story {
+      flex: 1;
+      min-width: 0;
+      padding: 0;
+      max-width: none;
+    }
+
     .silence-video-feature {
-      max-width: 380px;
-      margin: 0 auto 3rem;
-      padding: 0 2rem;
+      flex-shrink: 0;
+      width: 280px;
       text-align: center;
     }
 
@@ -90,6 +105,17 @@
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--text-muted);
+    }
+
+    @media (max-width: 800px) {
+      .silence-story-row {
+        flex-direction: column;
+        padding: 0 2rem 2rem;
+      }
+
+      .silence-video-feature {
+        width: 260px;
+      }
     }
 
     .silence-inspiration {
@@ -176,21 +202,22 @@
     </video>
   </div>
 
-  <!-- Story -->
-  <div class="exhibit-story">
-    <p>I feel the freest in the in-between moments.</p>
-    <p>We hold a lot of stories about ourselves and about the world, and the older I get, the more I notice they often don't quite line up with reality. How often do we live inside our heads, convinced the story is the whole picture? Reality is so much more complex and beautiful than what our minds construct about our identities, about others, about what any of this is.</p>
-    <p>I often go for runs to be seen by something real, something organic like myself, and to momentarily escape the constructed mental web we live and operate under. We are a fascinating species. But with our complexity comes our primitiveness, and the truth tends to exist in silence. In the aftermath. Life doesn't happen in the glamorous moments. It happens in the in-between, when we wait for the bus, when we're rushing to the next thing, when nobody is watching and nothing is asked of us.</p>
-    <p>With this exhibit I want to point at the small, beautiful things worth living for. I'd like to remind my dear friends to look closely at moss, at the trees and listen to the birds in our beautiful forests. Life is already here, happening all around us. Step into the silence long enough for the truth to come up. It's worth sitting with.</p>
-  </div>
+  <!-- Story + walkthrough video -->
+  <div class="silence-story-row">
+    <div class="exhibit-story">
+      <p>I feel the freest in the in-between moments.</p>
+      <p>We hold a lot of stories about ourselves and about the world, and the older I get, the more I notice they often don't quite line up with reality. How often do we live inside our heads, convinced the story is the whole picture? Reality is so much more complex and beautiful than what our minds construct about our identities, about others, about what any of this is.</p>
+      <p>I often go for runs to be seen by something real, something organic like myself, and to momentarily escape the constructed mental web we live and operate under. We are a fascinating species. But with our complexity comes our primitiveness, and the truth tends to exist in silence. In the aftermath. Life doesn't happen in the glamorous moments. It happens in the in-between, when we wait for the bus, when we're rushing to the next thing, when nobody is watching and nothing is asked of us.</p>
+      <p>With this exhibit I want to point at the small, beautiful things worth living for. I'd like to remind my dear friends to look closely at moss, at the trees and listen to the birds in our beautiful forests. Life is already here, happening all around us. Step into the silence long enough for the truth to come up. It's worth sitting with.</p>
+    </div>
 
-  <!-- Walkthrough video -->
-  <div class="silence-video-feature">
-    <video autoplay muted loop playsinline preload="metadata"
-           poster="../../assets/videos/silence_walkthrough_poster.jpg">
-      <source src="../../assets/videos/silence_walkthrough.mp4" type="video/mp4">
-    </video>
-    <span class="silence-video-feature-caption">a walk through the work</span>
+    <div class="silence-video-feature">
+      <video autoplay muted loop playsinline preload="metadata"
+             poster="../../assets/videos/silence_walkthrough_poster.jpg">
+        <source src="../../assets/videos/silence_walkthrough.mp4" type="video/mp4">
+      </video>
+      <span class="silence-video-feature-caption">a walk through the work</span>
+    </div>
   </div>
 
   <!-- Section 1: The Paintings -->

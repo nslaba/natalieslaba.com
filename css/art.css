@@ -214,53 +214,64 @@
   opacity: 0.7;
 }
 
-/* Meet the artist — intro video */
-.artist-video {
-  padding: 3rem 2rem 0;
-  text-align: center;
+/* Digital / Interactive — badge marking gallery items that link out to a live piece */
+.gallery-item[data-category="digital"]::after {
+  content: '↗';
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+/* Artist intro — bio paired with a short video introduction */
+.artist-intro {
+  padding: 2.5rem 2rem 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 780px;
+  margin: 0 auto;
   position: relative;
   z-index: 1;
 }
 
-.artist-video-label {
-  display: block;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.7rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 1.25rem;
-}
-
-.artist-video-frame {
-  max-width: 340px;
-  margin: 0 auto;
+.artist-intro-video {
+  flex-shrink: 0;
+  width: 160px;
   background: #000;
   overflow: hidden;
 }
 
-.artist-video-frame video {
+.artist-intro-video video {
   width: 100%;
   display: block;
 }
 
-/* Artist intro */
-.artist-intro {
-  padding: 2.5rem 2rem 0;
-  text-align: center;
-  position: relative;
-  z-index: 1;
+.artist-intro-text {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+  padding-top: 0.25rem;
 }
 
-.artist-intro p {
+.artist-intro-text p {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1rem, 1.6vw, 1.2rem);
   font-weight: 300;
   font-style: italic;
   color: var(--text-secondary);
-  max-width: 600px;
-  margin: 0 auto;
   line-height: 1.7;
+  margin: 0;
 }
 
 .artist-intro a {
@@ -284,13 +295,35 @@
   letter-spacing: 0.08em;
   color: var(--text-muted);
   text-decoration: none;
-  text-align: center;
+  text-align: left;
   margin-top: 1.25rem;
   transition: color 0.2s;
 }
 
 .artist-intro-show:hover {
   color: var(--text-primary);
+}
+
+@media (max-width: 700px) {
+  .artist-intro {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .artist-intro-video {
+    width: 150px;
+  }
+
+  .artist-intro-text,
+  .artist-intro-text p,
+  .artist-intro-show {
+    text-align: center;
+  }
+
+  .artist-intro-text {
+    padding-top: 0;
+  }
 }
 
 /* Gallery Section */
@@ -967,7 +1000,6 @@
     font-size: 0.9rem;
   }
 
-  .artist-video,
   .art-gallery,
   .art-thoughts,
   .shop-teaser {

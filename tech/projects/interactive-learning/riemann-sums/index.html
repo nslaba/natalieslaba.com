@@ -539,7 +539,7 @@
       <p class="p1-label" id="p1label">Riemann Sums</p>
       <h1 class="p1-headline" id="p1headline">Most of life is<br>constantly changing.</h1>
       <p class="p1-sub" id="p1sub">
-        Speed. Temperature. Growth. Nothing stays perfectly constant —
+        Speed. Temperature. Growth. Nothing stays perfectly constant,
         yet we need ways to measure what accumulates over time.
         How do we do that?
       </p>
@@ -564,7 +564,7 @@
         <h2 class="graph-caption-title">A runner at constant speed</h2>
         <p class="graph-caption-sub">
           Say a runner holds exactly 10 km/h for one hour.
-          Total distance = 10 km. Simple — it's just the area of that rectangle.
+          Total distance = 10 km. Simple: it's just the area of that rectangle.
           <br><br>
           <span style="font-family:'JetBrains Mono',monospace; font-size:0.82rem; color:var(--accent)">
             distance = speed × time = 10 × 1 = 10 km
@@ -586,7 +586,7 @@
         <h2 class="graph-caption-title">Now the runner changes speed</h2>
         <p class="graph-caption-sub">
           What if their speed varies continuously throughout the run?
-          The total distance is the area under this curve — but there's no simple formula for that.
+          The total distance is the area under this curve, but there's no simple formula for that.
         </p>
       </div>
       <div class="ponder-box reveal-on-scroll" style="margin: 2rem auto 0;">
@@ -644,7 +644,7 @@
     </div>
     <div class="reveal-body reveal-on-scroll">
       <p>
-        Each rectangle had a width — a tiny slice of time, Δx —
+        Each rectangle had a width (a tiny slice of time, Δx)
         and a height equal to the speed at that moment, f(x).
         Its area was <strong style="color:var(--text)">f(x) · Δx</strong>.
       </p>
@@ -653,7 +653,7 @@
         The more slices, the better the approximation.
       </p>
       <p>
-        Now imagine taking that idea to its logical extreme — what if the slices
+        Now imagine taking that idea to its logical extreme: what if the slices
         were <em>infinitely</em> thin? The sum converges to an exact value.
         That limit has a name:
       </p>
@@ -1080,11 +1080,11 @@ function drawRunner(ctx, sx, groundY, t, normSpeed) {
 
   const hints = [
     'One big rectangle. Does it fit the curve well?',
-    'Two pieces. A bit closer — but still rough.',
+    'Two pieces. A bit closer, but still rough.',
     'Four pieces. You can start to see the shape.',
     'Eight pieces. The gaps are shrinking.',
     'Sixteen. The rectangles are starting to hug the curve.',
-    'Thirty-two. Nearly there — the slices are almost invisible.',
+    'Thirty-two. Nearly there, the slices are almost invisible.',
   ];
 
   function riemann(n) {

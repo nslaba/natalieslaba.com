@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Paintings by Natalie Slaba — layered acrylic and acrylic ink, figurative and conceptual. Based in Squamish, BC.">
+  <meta name="description" content="Paintings by Natalie Slaba: layered acrylic and acrylic ink, figurative and conceptual. Based in Squamish, BC.">
 
-  <title>Gallery — Natalie Slaba</title>
+  <title>Gallery | Natalie Slaba</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -85,18 +85,15 @@
 
   <!-- Artist intro -->
   <section class="artist-intro">
-    <p>I make conceptual paintings in layered acrylic and acrylic ink. Human figures show up a lot — because people genuinely puzzle me, the decisions we make, the brief specific lives we lead inside these bodies. Based in Squamish, BC. <a href="statement.html">Read more →</a></p>
-    <a href="exhibitions/" class="artist-intro-show">Upcoming: Silence in a Noisy World — Solo exhibition, July–Sept 2026 at Squamish Arts →</a>
-  </section>
-
-  <!-- Meet the artist -->
-  <section class="artist-video">
-    <span class="artist-video-label">in her own words</span>
-    <div class="artist-video-frame">
+    <div class="artist-intro-video">
       <video controls playsinline preload="metadata"
              poster="../assets/videos/intro_poster.jpg">
         <source src="../assets/videos/intro.mp4" type="video/mp4">
       </video>
+    </div>
+    <div class="artist-intro-text">
+      <p>I make conceptual paintings in layered acrylic and acrylic ink. Human figures show up a lot. People genuinely puzzle me: the decisions we make, the brief specific lives we lead inside these bodies. Based in Squamish, BC. <a href="statement.html">Read more →</a></p>
+      <a href="exhibitions/" class="artist-intro-show">Upcoming: Silence in a Noisy World. Solo exhibition, July–Sept 2026 at Squamish Arts →</a>
     </div>
   </section>
 
@@ -104,7 +101,7 @@
   <section class="art-gallery" id="gallery">
     <h2>selected works</h2>
 
-    <p class="gallery-curatorial-note">A throughline runs under all of this: power, systems, and how perception bends under both. Dictator, Bourgeois Living, Human Ambition, Corruption of Perspective, and Long Term Non-Renewables circle the same question from different angles — who gets to decide what's real, and what it costs to go along with it.</p>
+    <p class="gallery-curatorial-note">A throughline runs under all of this: power, systems, and how perception bends under both. Dictator, Bourgeois Living, Human Ambition, Corruption of Perspective, and Long Term Non-Renewables circle the same question from different angles: who gets to decide what's real, and what it costs to go along with it.</p>
 
     <!-- Category filters -->
     <div class="art-categories">
@@ -112,11 +109,12 @@
       <button class="category-btn" data-filter="finished">Paintings</button>
       <button class="category-btn" data-filter="murals">Murals</button>
       <button class="category-btn" data-filter="sketches">Sketches</button>
+      <button class="category-btn" data-filter="digital">Digital</button>
     </div>
 
     <!-- Murals intro -->
     <div class="sketches-intro" id="murals-intro">
-      <p class="sketches-statement">At that scale, your whole body is in it — I'd often find myself dancing while I worked. It's also about as far from elitist as art gets. You walk past it. No ticket.</p>
+      <p class="sketches-statement">At that scale, your whole body is in it. I'd often find myself dancing while I worked. It's also about as far from elitist as art gets. You walk past it. No ticket.</p>
     </div>
 
     <!-- Sketches intro -->
@@ -324,7 +322,7 @@
         </div>
       </div>
 
-      <div class="gallery-item" data-category="finished" data-note="Pencil, middle school. I worked on this every day for two months. I couldn't stop and I didn't want to — it was the first time I had somewhere to be.">
+      <div class="gallery-item" data-category="finished" data-note="Pencil, middle school. I worked on this every day for two months. I couldn't stop, and I didn't want to. It was the first time I had somewhere to be.">
         <img src="../assets/images/art/thumbs/feet.webp" data-full="../assets/images/art/feet.webp" alt="Feet" loading="lazy">
         <div class="gallery-item-overlay">
           <span class="gallery-item-title">Feet</span>
@@ -862,6 +860,27 @@
         </div>
       </div>
 
+      <div class="gallery-tier-heading gallery-tier-heading--sub" data-tier="digital"><span>Digital &amp; Interactive</span></div>
+
+      <!-- Digital / Interactive -->
+      <div class="gallery-item" data-category="digital" data-link="../projects/webGL/animation/project.html">
+        <img src="../assets/images/art/thumbs/digital_webgl_animation.webp" data-full="../assets/images/art/thumbs/digital_webgl_animation.webp" alt="WebGL Character Animation" loading="lazy">
+        <div class="gallery-item-overlay">
+          <span class="gallery-item-title">WebGL Character Animation</span>
+          <span class="gallery-item-medium">Digital / Interactive, custom GLSL shaders</span>
+          <span class="gallery-item-note">Concept and materials both start in the studio: the surface textures are photographs of my own paintings, mapped onto a hand-built figure and lit with hand-written shading code. Click to open the interactive piece →</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="digital" data-link="../projects/Vulkan/vulkan.html">
+        <img src="../assets/images/art/thumbs/digital_vulkan_particles.webp" data-full="../assets/images/art/thumbs/digital_vulkan_particles.webp" alt="Particle System, Chaos Unmade" loading="lazy">
+        <div class="gallery-item-overlay">
+          <span class="gallery-item-title">Particle System: Chaos, Unmade</span>
+          <span class="gallery-item-medium">Digital / Interactive, GPU-driven particle simulation</span>
+          <span class="gallery-item-note">Chaos, the painting above, rebuilt as thousands of independent particles, each one remembering home, each one free to scatter under your cursor. Click to open the interactive piece →</span>
+        </div>
+      </div>
+
     </div>
 
     <button class="gallery-show-more" id="showMoreBtn">Show more</button>
@@ -894,7 +913,7 @@
 
   <!-- Exhibit notification -->
   <div class="exhibit-notify" id="exhibitNotify">
-    <a href="exhibitions/" class="exhibit-notify-text">Silence in a Noisy World — Solo exhibition, July–Sept 2026 at Squamish Arts</a>
+    <a href="exhibitions/" class="exhibit-notify-text">Silence in a Noisy World: Solo exhibition, July–Sept 2026 at Squamish Arts</a>
     <button class="exhibit-notify-close" aria-label="Dismiss">&times;</button>
   </div>
 
@@ -1102,6 +1121,10 @@
       // Click on gallery items
       items.forEach((item, index) => {
         item.addEventListener('click', () => {
+          if (item.dataset.link) {
+            window.open(item.dataset.link, '_blank');
+            return;
+          }
           visibleItems = getVisibleItems();
           const visibleIndex = visibleItems.indexOf(item);
           openLightbox(visibleIndex);

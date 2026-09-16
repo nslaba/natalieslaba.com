@@ -381,7 +381,7 @@
         <p class="quiz-feedback" id="quiz2Feedback"></p>
         <p class="quiz-insight" id="quiz2Insight">
           Then maybe we don't draw the big triangle directly.<br>
-          Maybe we only know how to draw a small one —<br>
+          Maybe we only know how to draw a small one,<br>
           and repeat.
         </p>
       </div>
@@ -458,15 +458,15 @@
   <div class="lesson-body">
 
     <div class="phase">
-      <p class="phase-label">// 01 — The paradox</p>
+      <p class="phase-label">// 01 · The paradox</p>
       <h2>Can something describe itself?</h2>
       <p>
         Sounds circular. If a definition refers to itself, doesn't it go on forever?
-        Sometimes — yes. But sometimes self-reference is exactly the right description.
+        Sometimes, yes. But sometimes self-reference is exactly the right description.
       </p>
       <p>
         Think about a folder on your computer. It contains files.
-        But it can also contain <em>other folders</em> — which contain files,
+        But it can also contain <em>other folders</em>, which contain files,
         and other folders, and so on. The only honest way to describe
         what's in a folder is: <em>"files, plus whatever's in each sub-folder."</em>
         That sentence refers to itself. That's recursion.
@@ -474,43 +474,43 @@
     </div>
 
     <div class="phase">
-      <p class="phase-label">// 02 — The two rules</p>
+      <p class="phase-label">// 02 · The two rules</p>
       <h2>Every recursive thing needs exactly two ingredients.</h2>
       <p>
-        A <strong style="color:#fff">base case</strong> — the simplest version of the problem,
+        A <strong style="color:#fff">base case</strong>: the simplest version of the problem,
         which you can answer directly without recursing. Without this, the function calls itself forever and crashes.
       </p>
       <p>
-        A <strong style="color:#fff">recursive case</strong> — the rule that reduces the problem
+        A <strong style="color:#fff">recursive case</strong>: the rule that reduces the problem
         to a slightly simpler version of itself, then trusts that the simpler version is already solved.
         The leap of faith: assume it works for <em>n − 1</em>, use that to solve <em>n</em>.
       </p>
     </div>
 
     <div class="phase">
-      <p class="phase-label">// 03 — What you're looking at</p>
+      <p class="phase-label">// 03 · What you're looking at</p>
       <h2>The Sierpinski triangle is defined by one recursive rule.</h2>
       <p>
-        Start with a triangle. Find the midpoint of each edge and connect them —
+        Start with a triangle. Find the midpoint of each edge and connect them:
         this divides it into four smaller triangles. Remove the middle one.
         That's the rule.
       </p>
       <p>
         Now apply it to each triangle that remains. And again. And again.
         The same rule, applied to itself, produces every level of detail you saw above.
-        Look at any corner — it is the whole triangle, shrunk down.
+        Look at any corner: it is the whole triangle, shrunk down.
         That's what recursion does: it describes a thing in terms of a smaller version of itself.
       </p>
     </div>
 
     <div class="phase">
       <p class="phase-label">// Coming next</p>
-      <h2>The call stack — and why it matters for ray tracing.</h2>
+      <h2>The call stack, and why it matters for ray tracing.</h2>
       <p>
         When a ray of light hits a mirror, it spawns a reflected ray.
         That reflected ray might hit another mirror, spawning another ray.
         This continues until the ray hits nothing, or we've gone deep enough.
-        Ray tracing <em>is</em> recursion — and understanding the call stack
+        Ray tracing <em>is</em> recursion, and understanding the call stack
         is what makes it click.
       </p>
     </div>
@@ -1062,7 +1062,7 @@
       ['btnQ4A','btnQ4B','btnQ4C','btnQ4D'].forEach(id => document.getElementById(id).disabled = true);
       const fb   = document.getElementById('quiz4Feedback');
       const btns = document.querySelector('#quiz4Panel .quiz-choices');
-      fb.innerHTML = 'Exactly. And a real program can\'t run forever — it has finite memory.';
+      fb.innerHTML = 'Exactly. And a real program can\'t run forever: it has finite memory.';
       showCorrectFeedback(btns, fb, 2800, () => {
         const q4 = document.getElementById('quiz4Panel');
         q4.style.opacity       = '0';
@@ -1083,7 +1083,7 @@
     });
     document.getElementById('btnQ4C').addEventListener('click', () => {
       if (!quiz4Active) return;
-      q4Wrong('btnQ4C', 'The pattern persists — each depth looks the same as the whole.');
+      q4Wrong('btnQ4C', 'The pattern persists: each depth looks the same as the whole.');
     });
     document.getElementById('btnQ4D').addEventListener('click', () => {
       if (!quiz4Active) return;
@@ -1106,7 +1106,7 @@
       ['btnQ5A','btnQ5B','btnQ5C'].forEach(id => document.getElementById(id).disabled = true);
       const fb   = document.getElementById('quiz5Feedback');
       const btns = document.querySelector('#quiz5Panel .quiz-choices');
-      fb.innerHTML = 'This is the base case — the condition that stops the recursion.<br>Without it, the program crashes.';
+      fb.innerHTML = 'This is the base case, the condition that stops the recursion.<br>Without it, the program crashes.';
       showCorrectFeedback(btns, fb, 2800, () => {
         const q5 = document.getElementById('quiz5Panel');
         q5.style.opacity       = '0';
@@ -1137,7 +1137,7 @@
     });
     document.getElementById('btnQ5C').addEventListener('click', () => {
       if (!quiz5Active) return;
-      q5Wrong('btnQ5C', 'Computers follow instructions exactly — they only stop if told to.');
+      q5Wrong('btnQ5C', 'Computers follow instructions exactly: they only stop if told to.');
     });
 
     // ---- Quiz 6 ----
@@ -1162,15 +1162,15 @@
 
     document.getElementById('btnQ6A').addEventListener('click', () => {
       if (!quiz6Active) return;
-      q6Wrong('btnQ6A', 'True — but that alone doesn\'t explain everything.');
+      q6Wrong('btnQ6A', 'True, but that alone doesn\'t explain everything.');
     });
     document.getElementById('btnQ6B').addEventListener('click', () => {
       if (!quiz6Active) return;
-      q6Wrong('btnQ6B', 'True — but consider the other reasons as well.');
+      q6Wrong('btnQ6B', 'True, but consider the other reasons as well.');
     });
     document.getElementById('btnQ6C').addEventListener('click', () => {
       if (!quiz6Active) return;
-      q6Wrong('btnQ6C', 'True — but look at all three options together.');
+      q6Wrong('btnQ6C', 'True, but look at all three options together.');
     });
 
     // ---- Arrow navigation ----

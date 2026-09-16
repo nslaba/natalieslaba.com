@@ -192,7 +192,7 @@ const levels = [
         winThreshold: 0.3,
         xTicks: [{ v: 0, label: '0' }, { v: 2, label: '2' }, { v: 4, label: '4' }],
         yTicks: [{ v: 2, label: '2' }, { v: 4, label: '4' }],
-        successMsg: 'The slope is zero at the peak — the curve is momentarily flat. ' +
+        successMsg: 'The slope is zero at the peak: the curve is momentarily flat. ' +
             'On the way up, the slope was positive. On the way down, negative. ' +
             'At the top, it\'s zero: the exact moment rising turns to falling.',
     },
@@ -206,7 +206,7 @@ const levels = [
         winThreshold: 0.3,
         xTicks: [{ v: 0, label: '0' }, { v: 1, label: '1' }, { v: 2, label: '2' }, { v: 3, label: '3' }, { v: 4, label: '4' }],
         yTicks: [{ v: 2, label: '2' }, { v: 4, label: '4' }],
-        successMsg: 'You found a turning point — where the slope crosses zero. ' +
+        successMsg: 'You found a turning point: where the slope crosses zero. ' +
             'This curve has two: a local maximum at x = 1 and a local minimum at x = 3. ' +
             'At both, the tangent line goes flat.',
     }
@@ -391,7 +391,7 @@ function draw() {
 
 function showSuccess(slope) {
     const lv = levels[level];
-    document.getElementById('modalTitle').textContent = 'slope = 0 — found it';
+    document.getElementById('modalTitle').textContent = 'slope = 0, found it';
     document.getElementById('modalMsg').textContent = lv.successMsg;
 
     const btn = document.getElementById('nextBtn');
@@ -422,11 +422,11 @@ function showReveal() {
 
     document.getElementById('modalTitle').textContent = 'You just discovered the derivative';
     document.getElementById('modalMsg').innerHTML =
-        'Every time you dragged that point, you were measuring the <strong>instantaneous rate of change</strong> — ' +
+        'Every time you dragged that point, you were measuring the <strong>instantaneous rate of change</strong>, ' +
         'how fast the curve was rising or falling at a single moment. That\'s exactly what the derivative is.<br><br>' +
-        'It\'s defined as a limit — the slope of a line between two points as those points get infinitely close:' +
+        'It\'s defined as a limit: the slope of a line between two points as those points get infinitely close:' +
         '<div class="formula">f′(x) &nbsp;=&nbsp; lim<sub>h→0</sub> &nbsp; [f(x + h) − f(x)] / h</div>' +
-        'At a maximum or minimum, the curve momentarily stops rising or falling — ' +
+        'At a maximum or minimum, the curve momentarily stops rising or falling, ' +
         'so the slope must pass through zero: <strong>f′(x) = 0</strong>. ' +
         'That\'s how calculus finds the peaks and valleys of any curve.';
 

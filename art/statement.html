@@ -108,6 +108,21 @@
       letter-spacing: 0.08em;
     }
 
+    .statement-cv-link {
+      display: block;
+      margin-top: 1rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .statement-cv-link:hover {
+      color: var(--text-primary);
+    }
+
     @media (max-width: 600px) {
       .statement-page {
         padding: 8rem 1.5rem 6rem;
@@ -173,6 +188,7 @@
 
     <div class="statement-divider"></div>
     <span class="statement-name">Natalie Slaba</span>
+    <a href="cv.html" class="statement-cv-link">Artist CV →</a>
 
   </main>
 

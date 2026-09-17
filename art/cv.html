@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Artist CV | Natalie Slaba">
+
+  <title>Artist CV | Natalie Slaba</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/art.css">
+
+  <style>
+    .cv-page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 11rem 2rem 9rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cv-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      display: block;
+    }
+
+    .cv-header {
+      margin-bottom: 4rem;
+    }
+
+    .cv-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      color: var(--text-primary);
+      margin: 0 0 0.5rem;
+    }
+
+    .cv-header p {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin: 0.2rem 0;
+    }
+
+    .cv-section {
+      margin-bottom: 3rem;
+    }
+
+    .cv-section h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin: 0 0 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cv-subheading {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin: 0 0 0.75rem;
+    }
+
+    .cv-subheading:not(:first-of-type) {
+      margin-top: 1.75rem;
+    }
+
+    .cv-entry {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 1.1rem;
+      align-items: baseline;
+    }
+
+    .cv-year {
+      flex-shrink: 0;
+      width: 3.2rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .cv-entry-body {
+      flex: 1;
+    }
+
+    .cv-entry-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--text-primary);
+      margin: 0 0 0.15rem;
+    }
+
+    .cv-entry-meta {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .cv-download {
+      display: inline-block;
+      margin-top: 1rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .cv-download:hover {
+      color: var(--text-primary);
+    }
+
+    @media (max-width: 600px) {
+      .cv-page {
+        padding: 8rem 1.5rem 6rem;
+      }
+
+      .cv-entry {
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+
+      .cv-year {
+        width: auto;
+      }
+    }
+  </style>
+</head>
+<body class="art-page">
+
+  <!-- no background canvas on this page -->
+  <!-- Navigation -->
+  <nav class="art-nav">
+    <div class="nav-left">
+      <a href="../index.html" class="logo">Home</a>
+      <span class="nav-sep">/</span>
+      <a href="index.html" class="logo">Gallery</a>
+    </div>
+    <button class="art-nav-toggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="art-nav-links">
+      <li><a href="exhibitions/">Exhibitions</a></li>
+      <li><a href="statement.html">Artist Statement</a></li>
+      <li><a href="../tech/index.html">Tech</a></li>
+    </ul>
+  </nav>
+
+  <main class="cv-page">
+
+    <span class="cv-label">Artist CV</span>
+
+    <div class="cv-header">
+      <h1>Natalie Slaba</h1>
+      <p>Squamish, British Columbia</p>
+      <p>natalieslaba.com &middot; slaba.natalie@gmail.com</p>
+    </div>
+
+    <section class="cv-section">
+      <h2>Education</h2>
+      <div class="cv-entry">
+        <span class="cv-year">2020</span>
+        <div class="cv-entry-body">
+          <p class="cv-entry-title">Bachelor of Science, Computer Science and Visual Arts</p>
+          <p class="cv-entry-meta">University of Victoria, Victoria BC</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2>Exhibitions</h2>
+
+      <p class="cv-subheading">Solo</p>
+      <div class="cv-entry">
+        <span class="cv-year">2026</span>
+        <div class="cv-entry-body">
+          <p class="cv-entry-title">Silence in a Noisy World</p>
+          <p class="cv-entry-meta">Squamish Arts, Squamish BC &middot; July&ndash;September 2026</p>
+        </div>
+      </div>
+      <div class="cv-entry">
+        <span class="cv-year">2015</span>
+        <div class="cv-entry-body">
+          <p class="cv-entry-title">Uptown 7th Gallery</p>
+          <p class="cv-entry-meta">Downtown Calgary, AB</p>
+        </div>
+      </div>
+      <div class="cv-entry">
+        <span class="cv-year">2014</span>
+        <div class="cv-entry-body">
+          <p class="cv-entry-title">First ART Exhibit</p>
+          <p class="cv-entry-meta">Lux Laundromat, Downtown Calgary AB</p>
+        </div>
+      </div>
+
+      <p class="cv-subheading">Group / Collaborative</p>
+      <div class="cv-entry">
+        <span class="cv-year">2019</span>
+        <div class="cv-entry-body">
+          <p class="cv-entry-title">L'expo a Montreal avec Karim</p>
+          <p class="cv-entry-meta">Galerie Parfois, Montreal QC</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2>Commissions</h2>
+      <div class="cv-entry">
+        <span class="cv-year">2026</span>
+        <div class="cv-entry-body">
+          <p class="cv-entry-title">Interior mural</p>
+          <p class="cv-entry-meta">Private commission, Squamish BC</p>
+        </div>
+      </div>
+      <div class="cv-entry">
+        <span class="cv-year">2016</span>
+        <div class="cv-entry-body">
+          <p class="cv-entry-title">Large-scale painting</p>
+          <p class="cv-entry-meta">Victoria Square, Calgary AB</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2>Press</h2>
+      <div class="cv-entry">
+        <span class="cv-year">2015</span>
+        <div class="cv-entry-body">
+          <p class="cv-entry-title">"Artist's work digs deep into her past"</p>
+          <p class="cv-entry-meta">Jeremy Simes, Metro, Calgary AB</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="art-footer">
+    <nav class="art-footer-nav">
+      <a href="../index.html">Home</a>
+      <a href="../tech/index.html">Tech</a>
+      <a href="statement.html">Artist Statement</a>
+      <a href="commissions.html">Commissions</a>
+      <a href="shop.html">Shop</a>
+      <a href="../about.html">About</a>
+      <a href="mailto:slaba.natalie@gmail.com">Contact</a>
+      <a href="https://www.instagram.com/naty_slaba.art" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+    <span style="font-size: 0.75rem; color: #999;">
+      &copy; 2026 Natalie Slaba
+    </span>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const toggle = document.querySelector('.art-nav-toggle');
+    const links = document.querySelector('.art-nav-links');
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        toggle.classList.toggle('open');
+        links.classList.toggle('open');
+      });
+    }
+  </script>
+
+</body>
+</html>

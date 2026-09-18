@@ -89,6 +89,53 @@
   color: var(--text-primary);
 }
 
+/* Exhibitions dropdown */
+.art-nav-dropdown {
+  position: relative;
+}
+
+.art-nav-dropdown > a::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 0.4em;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 3px solid currentColor;
+  opacity: 0.45;
+  vertical-align: middle;
+}
+
+.art-nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin: 0.75rem 0 0;
+  padding: 0.5rem 0;
+  min-width: 190px;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  list-style: none;
+  z-index: 10;
+}
+
+.art-nav-dropdown:hover .art-nav-dropdown-menu,
+.art-nav-dropdown:focus-within .art-nav-dropdown-menu {
+  display: block;
+}
+
+.art-nav-dropdown-menu li a {
+  display: block;
+  padding: 0.55rem 1.25rem;
+  white-space: nowrap;
+  font-size: 0.82rem;
+}
+
 /* Mobile menu toggle */
 .art-nav-toggle {
   display: none;
@@ -765,6 +812,27 @@ a.exhibit-next-back:hover {
   .art-nav-links a {
     font-size: 1rem;
     padding: 0.25rem 0;
+  }
+
+  .art-nav-dropdown > a::after {
+    display: none;
+  }
+
+  .art-nav-dropdown-menu {
+    display: block;
+    position: static;
+    background: none;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    padding: 0.4rem 0 0 1rem;
+    margin: 0;
+  }
+
+  .art-nav-dropdown-menu li a {
+    padding: 0.4rem 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
   }
 
   .exhibitions-title {

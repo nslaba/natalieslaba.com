@@ -137,6 +137,23 @@
       color: var(--text-primary);
     }
 
+    .cv-link-out {
+      margin-top: -0.5rem;
+    }
+
+    .cv-link-out a {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .cv-link-out a:hover {
+      color: var(--text-primary);
+    }
+
     @media (max-width: 600px) {
       .cv-page {
         padding: 8rem 1.5rem 6rem;
@@ -189,6 +206,7 @@
       <h1>Natalie Slaba</h1>
       <p>Squamish, British Columbia</p>
       <p>natalieslaba.com &middot; slaba.natalie@gmail.com</p>
+      <a href="../assets/docs/natalie-slaba-cv.pdf" class="cv-download" download>Download CV (PDF) &rarr;</a>
     </div>
 
     <section class="cv-section">
@@ -236,6 +254,25 @@
           <p class="cv-entry-meta">Galerie Parfois, Montreal QC</p>
         </div>
       </div>
+    </section>
+
+    <section class="cv-section">
+      <h2>Community Engagement</h2>
+      <div class="cv-entry">
+        <span class="cv-year">2015</span>
+        <div class="cv-entry-body">
+          <p class="cv-entry-title">Public shadow &amp; light shows, collaborative floor painting</p>
+          <p class="cv-entry-meta">Uptown 7th Gallery, Calgary AB &mdash; open-door programming for passersby and train commuters across the street</p>
+        </div>
+      </div>
+      <div class="cv-entry">
+        <span class="cv-year">2019</span>
+        <div class="cv-entry-body">
+          <p class="cv-entry-title">Community drawing wall</p>
+          <p class="cv-entry-meta">Galerie Parfois, Montreal QC &mdash; open participation wall running alongside L'expo &agrave; Montr&eacute;al avec Karim</p>
+        </div>
+      </div>
+      <p class="cv-link-out"><a href="exhibitions/community.html">View Community Engagement &rarr;</a></p>
     </section>
 
     <section class="cv-section">

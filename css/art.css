@@ -95,6 +95,15 @@
   position: relative;
 }
 
+.art-nav-dropdown::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 0.75rem;
+}
+
 .art-nav-dropdown > a::after {
   content: '';
   display: inline-block;

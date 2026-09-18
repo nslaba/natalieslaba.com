@@ -579,6 +579,24 @@ a.exhibit-row:hover .exhibit-row-arrow {
   opacity: 0.7;
 }
 
+.exhibit-source-links {
+  padding: 0 2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+.exhibit-source-links a {
+  color: var(--text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.exhibit-source-links a:hover {
+  color: var(--text-primary);
+}
+
 /* Photo gallery — horizontal scroll row */
 .exhibit-gallery {
   display: flex;
